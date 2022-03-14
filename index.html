@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="showHighScores()">
+    <div class="grid">
+        <div class="left-column">
+            <h2> HIGH SCORES </h2>
+            <table id="highScores"> </table>
+        </div>
+        <canvas class="game-board" id="board"></canvas>
+        <div class="right-column">
+            <div>
+                <h1>MY TETRIS</h1>
+                <p>Score : <span id="score">0</span></p>
+                <p>Lines : <span id="lines">0</span></p>
+                <p>Level : <span id="level">0</span></p>
+                <span> Next Piece: </span><canvas id="next" class="next"></canvas>
+            </div>
+            <button onclick ="play()" class="game-button" id="start">Start</button>
+            <button onclick="location.reload()" class="game-button reload-button" id="restart"> ReStart</button>
+            <button onclick ="pause()" class="game-button" id="pause" > Pause</button>
+        </div>
+    </div>
+
+<script src="constants.js"></script>
+<script src="board.js"></script>
+<script src="piece.js"></script>
+<script src="script.js"></script> 
+</body>
+</html>
